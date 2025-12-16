@@ -1,0 +1,47 @@
+*{
+    font-family: 'Verdana';
+    text-align: center;
+}
+header{
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+aside{
+    background-color: palegreen;
+    width: 30%;
+    height: 600px;
+    float: left;
+}
+main{
+    background-color: honeydew;
+    width: 70%;
+    height: 500px;
+    padding-top: 100px;
+    float: left;
+}
+footer{
+    background-color: palegreen;
+    padding: 3px;
+    clear: both;
+}
+table, td{
+    border: 1px solid darkgreen;
+    border-collapse: collapse;
+}
+table{
+    margin: auto;
+    width: 95%;
+}
+td, th{
+    padding: 20px 0;
+}
+button{
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+button:hover{
+    background-color: honeydew;
+    color: darkgreen;
+}

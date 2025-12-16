@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT nazwa, ilosc, nazwaProd FROM Materialy m INNER JOIN Producenci p ON m.Producenci_id = p.id WHERE ilosc > 9;
+Zapytanie 2: SELECT nazwa, nazwaProd, nazwaJedn FROM (Materialy m INNER JOIN Producenci p ON m.Producenci_id = p.id) INNER JOIN Jednostki j ON m.Jednostki_id = j.id;
+Zapytanie 3: CREATE USER `zaopatrzenie`@`localhost` IDENTIFIED BY 'Z@op@trzenie';
+Zapytanie 4: GRANT SELECT, UPDATE, INSERT, DELETE ON firma.* TO `zaopatrzenie`@`localhost`;
