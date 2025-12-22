@@ -1,0 +1,54 @@
+header{
+    color: white;
+    text-align: center;
+    height: 330px;
+}
+
+.team{
+    color: white;
+    text-align: center;
+    width: 170px;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+.team:hover{
+    background-color: white;
+    color: black;
+}
+
+main{
+    color: white;
+}
+
+#container1{
+    display: flex;
+}
+
+#league{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#block_left{
+    background-color: whitesmoke;
+    width: 30%;
+    text-align: center;
+    height: 150px;
+}
+#block_right{
+    background-color: whitesmoke;
+    width: 70%;
+    height: 150px;
+}
+
+body{
+    font-family: 'Verdana';
+    background-color: seagreen;
+}
+
+h3{
+    text-align: center;
+    letter-spacing: 6px;
+    text-transform: capitalize;
+}
