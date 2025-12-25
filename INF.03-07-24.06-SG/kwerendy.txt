@@ -1,0 +1,4 @@
+Zapytanie 1: UPDATE wagi SET dzien = CURRENT_DATE, czas = CURRENT_TIME WHERE lokalizacje_id IN (2, 3, 4);
+Zapytanie 2: SELECT ulica FROM lokalizacje;
+Zapytanie 3: INSERT INTO wagi (lokalizacje_id, waga, rejestracja, dzien, czas) VALUES (5, FLOOR(RAND()*10+1), "DW12345", CURRENT_DATE, CURRENT_TIME);
+Zapytanie 4: SELECT rejestracja, ulica, waga, dzien, czas FROM wagi w INNER JOIN lokalizacje l ON w.lokalizacje_id = l.id WHERE waga > 5;
