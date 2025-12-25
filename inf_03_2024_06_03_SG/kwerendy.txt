@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT nazwa, rzeka, stanAlarmowy FROM wodowskazy;
+Zapytanie 2: SELECT w.nazwa, w.rzeka, w.stanOstrzegawczy, w.stanAlarmowy, p.stanWody FROM wodowskazy w INNER JOIN pomiary p ON w.id = p.wodowskazy_id WHERE p.dataPomiaru LIKE '2022-05-05';
+Zapytanie 3: SELECT w.nazwa, w.rzeka, w.stanOstrzegawczy, w.stanAlarmowy, p.stanWody FROM wodowskazy w INNER JOIN pomiary p ON w.id = p.wodowskazy_id WHERE p.dataPomiaru LIKE '2022-05-05' AND p.stanWody > w.stanOstrzegawczy;
+Zapytanie 4: SELECT dataPomiaru, AVG(stanWody) as SredniStan FROM pomiary GROUP BY dataPomiaru;

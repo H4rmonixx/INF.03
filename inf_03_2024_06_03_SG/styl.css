@@ -1,0 +1,58 @@
+*{
+    font-family: 'Georgia';
+}
+header{
+    display: flex;
+}
+header > section{
+    background-color: navy;
+    color: white;
+    text-align: center;
+    height: 100px;
+    width: 50%;
+}
+nav{
+    background-color: navy;
+    padding: 20px;
+}
+.radio-label{
+    color: silver;
+    margin: 50px;
+}
+.radio-label:hover{
+    color: white;
+    text-decoration: underline;
+}
+main{
+    display: flex;
+}
+main > section, aside{
+    background-color: azure;
+    height: 550px;
+}
+main > section{
+    width: 70%;
+}
+main > aside{
+    width: 30%;
+}
+footer{
+    background-color: navy;
+    color: white;
+}
+footer > p{
+    margin: 0;
+}
+
+table{
+    border: 1px solid navy;
+    margin: auto;
+    width: 70%;
+}
+tr:hover{
+    background-color: skyblue;
+}
+
+header > aside > img{
+    width: 90%;
+}
