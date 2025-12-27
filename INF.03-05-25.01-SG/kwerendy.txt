@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT Data, Temat FROM szkolenia ORDER BY Data ASC;
+Zapytanie 2: SELECT s.Data, s.Temat, t.Imie, t.Nazwisko FROM szkolenia s INNER JOIN trenerzy t ON s.Id_trenera = t.Id;
+Zapytanie 3: SELECT t.Imie, t.Nazwisko, Count(*) LiczbaSzkolen FROM szkolenia s INNER JOIN trenerzy t ON s.Id_trenera = t.Id GROUP BY t.Imie, t.Nazwisko;
+Zapytanie 4: ALTER TABLE zapisy CHANGE Id_klienta Id_sluchacza INT;
