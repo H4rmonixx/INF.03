@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT data FROM imieniny WHERE imiona LIKE '%Karola%';
+Zapytanie 2: SELECT imiona FROM imieniny WHERE data LIKE '05-04';
+Zapytanie 3: SELECT count(*) as ilosc FROM imieniny WHERE imiona LIKE '%mir%';
+Zapytanie 4: ALTER TABLE imieniny ADD zyczenia VARCHAR(500);
