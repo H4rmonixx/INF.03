@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT LOWER(nazwa) as nazwa FROM wojewodztwa;
+Zapytanie 2: SELECT count(*) FROM miasta WHERE id_wojewodztwa = 1;
+Zapytanie 3: SELECT m.nazwa, w.nazwa FROM miasta m INNER JOIN wojewodztwa w ON m.id_wojewodztwa = w.id WHERE m.nazwa LIKE 'Lu%' ORDER BY m.nazwa ASC;
+Zapytanie 4: SELECT w.nazwa, count(*) AS 'Liczba miast' FROM wojewodztwa w INNER JOIN miasta m ON w.id = m.id_wojewodztwa GROUP BY w.nazwa;
