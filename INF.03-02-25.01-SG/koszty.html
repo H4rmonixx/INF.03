@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Montaż paneli podłogowych</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            function calc(){
+                let widthVal = document.getElementById("width").value;
+                let lengthVal = document.getElementById("length").value;
+                let typeElement = document.querySelector('input[type=radio]:checked');
+
+                if(widthVal.length <= 0 || lengthVal.length <= 0 || !typeElement){
+                    document.getElementById("result").textContent = "Wprowadź poprawne dane.";
+                    return;
+                }
+
+                const width = parseFloat(widthVal);
+                const length = parseFloat(lengthVal);
+                const surface = width * length;
+
+                const costs = [12, 14, 18];
+                document.getElementById("result").textContent = `Pole powierzchni pomieszczenia: ${surface}, koszt montażu ${surface * costs[parseInt(typeElement.value)]}`;
+
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <img src="montaz_paneli.png" alt="firma usługowa">
+        </header>
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="oferta.html">Oferta</a>
+            <a href="koszty.html">Kalkulator kosztów</a>
+        </nav>
+        <main>
+            <h1>Kalkulator kosztów montażu</h1>
+            <label for="width">Szerokość pomieszczenia [m]: </label>
+            <input type="number" id="width">
+            <label for="length">Długość pomieszczenia [m]: </label>
+            <input type="number" id="length">
+            <p>Typ panelu</p>
+            <input type="radio" name="type" id="lam" value="0">
+            <label for="laminated">Panele laminowane</label><br>
+            <input type="radio" name="type" id="vin" value="1">
+            <label for="vin">Panele winylowe</label><br>
+            <input type="radio" name="type" id="pane" value="2">
+            <label for="pane">Deska podłogowa</label><br>
+            <button onclick="calc()">Oblicz</button>
+            <p id="result"></p>
+        </main>
+        <footer>
+            <h5>Autor strony: 00000000000</h5>
+        </footer>
+    </body>
+</html>
