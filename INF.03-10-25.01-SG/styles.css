@@ -1,0 +1,47 @@
+*{
+    font-family: 'Helvetica';
+}
+header, footer{
+    background-color: #FFD966;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 5px 5px 10px black;
+}
+footer{
+    font-size: 120%;
+}
+
+
+main{
+    display: flex;
+}
+main > aside{
+    background-color: #FFD966;
+    width: 25%;
+    height: 450px;
+}
+main > section{
+    background-color: #C5E0B4;
+    width: 75%;
+    height: 450px;
+    text-align: center;
+    box-shadow: 0 0 15px black inset;
+}
+
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    width: 70%;
+    margin: auto;
+}
+ul{
+    list-style-type: square;
+    line-height: 1.5;
+}
+a, h4{
+    color: seagreen;
+}
