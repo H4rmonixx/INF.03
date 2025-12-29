@@ -1,0 +1,74 @@
+*{
+    font-family: 'Georgia';
+    color: white;
+}
+
+header, footer{
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+main{
+    display: flex;
+}
+main > aside, main > section{
+    background-color: lightsalmon;
+    height: 527px;
+}
+main > section{
+    width: 70%;
+}
+main > aside{
+    width: 15%;
+}
+
+#miniatury{
+    background-color: maroon;
+    height: 70px;
+}
+#miniatury > img{
+    height: 70px;
+    animation-name: miniatura_anim;
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+
+@keyframes miniatura_anim{
+    from{
+        padding-left: 50px;
+    }
+    to{
+        padding-left: 0;
+    }
+}
+
+main > aside > button{
+    background-color: lightsalmon;
+    color: maroon;
+    border: 0;
+    font-size: 400%;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+}
+
+main > section > img{
+    display: block;
+    margin: auto;
+    padding-top: 45px;
+}
+main > section > img:hover{
+    animation-name: aktywna_anim;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    scale: 1.2;
+}
+
+@keyframes aktywna_anim{
+    from{
+        scale: 1;
+    }
+    to{
+        scale: 1.2;
+    }
+}

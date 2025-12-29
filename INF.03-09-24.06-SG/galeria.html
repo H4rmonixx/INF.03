@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Biuro turystyczne</title>
+        <link rel="stylesheet" type="text/css" href="styl.css">
+        <script>
+            let aktywne_zdj = 1;
+            function nastepne(){
+                aktywne_zdj++;
+                if(aktywne_zdj > 7) aktywne_zdj = 1;
+
+                document.getElementById("aktywne_zdj").src = `${aktywne_zdj}.jpg`;
+            }
+            function poprzednie(){
+                aktywne_zdj--;
+                if(aktywne_zdj < 1) aktywne_zdj = 7;
+
+                document.getElementById("aktywne_zdj").src = `${aktywne_zdj}.jpg`;
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Zwiedzamy Polskę</h1>
+        </header>
+        <main>
+            <aside>
+                <button onclick="poprzednie()">&lt;</button>
+            </aside>
+            <section>
+                <img src="1.jpg" alt="Aktywne zdjęcie" id="aktywne_zdj">
+            </section>
+            <aside>
+                <button onclick="nastepne()">&gt;</button>
+            </aside>
+        </main>
+        <section id="miniatury">
+            <img src="1.jpg" alt="Gdańsk">
+            <img src="2.jpg" alt="Kraków">
+            <img src="3.jpg" alt="Niedzica">
+            <img src="4.jpg" alt="Pieniny">
+            <img src="5.jpg" alt="Szklarska Poręba">
+            <img src="6.jpg" alt="Tatry">
+            <img src="7.jpg" alt="Wrocław">
+        </section>
+        <footer>
+            <h3>Autorem galerii jest:</h3>
+            <p>00000000000</p>
+            <a href="http://pixabay.com" target="_blank">Więcej zdjęć</a>
+        </footer>
+    </body>
+</html>
