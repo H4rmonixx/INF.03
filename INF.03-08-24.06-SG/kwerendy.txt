@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT imie, nazwisko FROM Osoby WHERE year(dataUr) > 2000;
+Zapytanie 2: SELECT DISTINCT miasto FROM Adresy ORDER BY miasto ASC;
+Zapytanie 3: SELECT o.imie, o.nazwisko, t.numer FROM Osoby o INNER JOIN Telefony t ON o.id = t.Osoby_id;
+Zapytanie 4: ALTER TABLE Adresy ADD numerMieszkania INT AFTER numer;

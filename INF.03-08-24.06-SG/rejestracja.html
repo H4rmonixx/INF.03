@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sklep - rejestracja</title>
+        <link rel="stylesheet" href="styl.css" type="text/css">
+    </head>
+    <body>
+        <aside>
+            <img src="obraz.png" alt="promocje">
+            <h2>Sprawdź promocje</h2>
+            <table>
+                <tr>
+                    <th>co?</th>
+                    <th>ile taniej?</th>
+                </tr>
+                <tr>
+                    <td>ubrania</td>
+                    <td>15%</td>
+                </tr>
+                <tr>
+                    <td>buty</td>
+                    <td>25%</td>
+                </tr>
+            </table>
+        </aside>
+        <header>
+            <h1>Zarejestruj się w sklepie</h1>
+        </header>
+        <main>
+            <button onclick="zmienBlok(1)">Klient</button>
+            <button onclick="zmienBlok(2)">Adres</button>
+            <button onclick="zmienBlok(3)">Kontakt</button>
+            <div class="blok widoczny">
+                <p>Imię</p>
+                <input type="text" placeholder="Wpisz dane..." id="imie">
+                <p>Nazwisko</p>
+                <input type="text" id="nazwisko">
+                <p>Data urodzenia</p>
+                <input type="date" id="data_urodzenia">
+            </div>
+            <div class="blok">
+                <p>Ulica</p>
+                <input type="text" id="ulica">
+                <p>Numer</p>
+                <input type="number" id="numer">
+                <p>Miasto</p>
+                <input type="text" id="miasto">
+            </div>
+            <div class="blok">
+                <p>Numer komórkowy</p>
+                <input type="tel" id="telefon"><br>
+                <input type="checkbox" id="rodo">
+                <label for="rodo">Akceptuje RODO</label><br>
+                <button onclick="zatwierdz()">Zatwierdź dane</button>
+            </div>
+        </main>
+        <section id="pasek_postepu">
+            <div id="pasek_postepu_wnetrze"></div>
+        </section>
+        <footer>
+            <h4>Rejestrację  do  sklepu  wykonał: 00000000000</h4>
+        </footer>
+
+        <script>
+
+            let stan_paska = 4;
+
+            const kontrolki = document.querySelectorAll("input");
+            for(let i=0; i<kontrolki.length; i++){
+                kontrolki[i].addEventListener("focusout", aktualizujPasek);
+            }
+
+            function zmienBlok(numer){
+                let bloki = document.getElementsByClassName("blok");
+                for(let i=0; i<bloki.length; i++){
+                    if(i+1 != numer) bloki[i].classList.remove("widoczny");
+                    else bloki[i].classList.add("widoczny");
+                }
+            }
+            function aktualizujPasek(){
+                if(stan_paska >= 100) return;
+                stan_paska += 12;
+                document.getElementById("pasek_postepu_wnetrze").style.width = `${stan_paska}%`;
+            }
+            function zatwierdz(){
+                let wiadomosc = "";
+                for(let i=0; i<kontrolki.length; i++){
+                    wiadomosc += kontrolki[i].value + ", ";
+                }
+                console.log(wiadomosc);
+            }
+
+        </script>
+
+    </body>
+</html>
