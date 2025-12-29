@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kursy komputerowe</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            function calc(){
+
+                let price = 0;
+                if(document.getElementById("react").checked) price += 5000;
+                if(document.getElementById("js").checked) price += 3000;
+
+                const installmentsCount = parseInt(document.getElementById("installments").value);
+                const city = document.getElementById("city").value;
+
+                document.getElementById("result").textContent = `Kurs odbędzie się w ${city}. Koszt całkowity: ${price} zł. Płacisz ${installmentsCount} rat po ${price / installmentsCount} zł`;
+
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <img src="baner.png" alt="kursy komputerowe">
+        </header>
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="raty.html">Koszt rat</a>
+            <a href="https://moje-szkolenia.pl/">Nasz partner</a>
+        </nav>
+        <main>
+
+            <h3>Oblicz miesięczną ratę</h3>
+
+            <input type="checkbox" id="react" class="kontrolki">
+            <label for="react">Kurs React.js</label><br>
+            <input type="checkbox" id="js" class="kontrolki">
+            <label for="react">Kurs Javascript</label><br>
+            
+            <label for="installments">Liczba rat</label>
+            <input type="number" id="installments" class="kontrolki"><br>
+
+            <select id="city" class="kontrolki">
+                <option value="Warszawa">Warszawa</option>
+                <option value="Katowice">Katowice</option>
+                <option value="Gdańsk">Gdańsk</option>
+            </select>
+            <br>
+
+            <button class="kontrolki" onclick="calc()">Oblicz</button>
+
+            <p id="result"></p>
+
+        </main>
+        <footer>
+            <p>Autor strony: 00000000000</p>
+        </footer>
+    </body>
+</html>
