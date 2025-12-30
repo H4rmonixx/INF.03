@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT nazwa FROM marki;
+Zapytanie 2: SELECT model, rocznik, przebieg, paliwo, cena, zdjecie FROM samochody WHERE id = 10;
+Zapytanie 3: SELECT m.nazwa, s.model, s.rocznik, s.cena, s.zdjecie FROM samochody s INNER JOIN marki m ON s.marki_id = m.id WHERE s.wyrozniony = 1 LIMIT 4;
+Zapytanie 4: SELECT s.model, s.cena, s.zdjecie FROM samochody s INNER JOIN marki m ON s.marki_id = m.id WHERE m.nazwa LIKE 'Audi';
