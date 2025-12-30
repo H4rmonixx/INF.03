@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rejestracja</title>
+        <link rel="stylesheet" type="text/css" href="styl.css">
+    </head>
+    <body>
+        <header>
+            <h1>Formularz rejestracyjny konferencji <em>Nasze Kwiaty</em></h1>
+        </header>
+        <main>
+            <form id="formularz">
+                <div class="blok_formularza widoczny">
+                    <h2>Dane osobowe</h2>
+                    <input type="text" placeholder="Wpisz imię..." id="imie" required>
+                    <input type="text" placeholder="Wpisz nazwisko..." id="nazwisko" required>
+                    <button type="button" onclick="blokFormularza(2)">Następna karta</button>
+                </div>
+                <div class="blok_formularza">
+                    <h2>Dane kontaktowe</h2>
+                    <input type="email" placeholder="Twój e-mail...">
+                    <input type="tel" placeholder="Twój numer telefonu...">
+                    <button type="button" onclick="blokFormularza(3)">Następna karta</button>
+                </div>
+                <div class="blok_formularza">
+                    <h2>Hasło do logowania</h2>
+                    <input type="password" placeholder="Podaj hasło" id="haslo1">
+                    <input type="password" placeholder="Powtórz hasło" id="haslo2">
+                    <button type="submit">Zatwierdź</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <section>
+                <video src="motyl.mp4" controls>Przeglądarka nie obsługuje tego formatu</video>
+            </section>
+            <section>
+                <h3>Plan konferencji</h3>
+                <table>
+                    <tr>
+                        <td>9:00 - 12:00</td>
+                        <td>Pielęgnacja roślin</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 15:00</td>
+                        <td>Targi kwiatowe</td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <p>
+                    <a href="https://www.kwiaty.pl/">Internetowa kwiaciarnia</a>
+                </p>
+            </section>
+            <section>
+                <p>Formularz wykonał: 00000000000</p>
+            </section>
+        </footer>
+
+        <script>
+            function blokFormularza(numer){
+                let bloki = document.getElementsByClassName("blok_formularza");
+                for(let i=0; i<bloki.length; i++){
+                    if(i+1 == numer) bloki[i].classList.add("widoczny");
+                    else bloki[i].classList.remove("widoczny");
+                }
+            }
+            document.getElementById("formularz").addEventListener("submit", function(event){
+
+                event.preventDefault();
+                const haslo1 = document.getElementById("haslo1").value;
+                const haslo2 = document.getElementById("haslo2").value;
+                if(haslo1 !== haslo2){
+                    alert("Podane hasła różnią się");
+                    return;
+                }
+
+                console.log(`Witaj ${document.getElementById("imie").value} ${document.getElementById("nazwisko").value}`);
+
+            });
+        </script>
+
+    </body>
+</html>
