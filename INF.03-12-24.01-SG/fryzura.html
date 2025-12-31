@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fryzjerstwo</title>
+        <link rel="stylesheet" href="styl8.css" type="text/css">
+    </head>
+    <body>
+        <div id="kontener">
+            <main>
+                <header>
+                    <a href="index.html"><h1>SALON FRYZJERSKI</h1></a>
+                </header>
+                <section>
+                    <h2>PROMOCJA!</h2>
+                    <input type="radio" name="rodzaj" id="rodzaj-krotkie" value="0">
+                    <label for="rodzaj-krotkie">Krótkie</label><br>
+                    <input type="radio" name="rodzaj" id="rodzaj-srednie" value="1">
+                    <label for="rodzaj-srednie">Średnie</label><br>
+                    <input type="radio" name="rodzaj" id="rodzaj-poldlugie" value="2">
+                    <label for="rodzaj-poldlugie">Półdługie</label><br>
+                    <input type="radio" name="rodzaj" id="rodzaj-dlugie" value="3">
+                    <label for="rodzaj-dlugie">Długie</label><br>
+                    <button type="button" onclick="pokazPromocje()">Odkryj promocję</button>
+                    <p id="wynik"></p>
+                </section>
+                <section>
+                    <p>Witaj! Miło nam, że odwiedziłeś nasz salon. Sprawdź promocje!</p>
+                    <h4>Kontakt: 444 555 666</h4>
+                </section>
+            </main>
+            <aside>
+                <section>
+                    <a href="fryzura.html"><h4>Ceny strzyżenia</h4></a>
+                    <table>
+                        <tr>
+                            <th>Długość włosów</th>
+                            <th>Cena</th>
+                        </tr>
+                        <tr>
+                            <td>Krótkie</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Średnie</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Półdługie</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Długie</td>
+                            <td>50</td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <img src="obraz1.jpg" alt="Fryzjerka">
+                </section>
+            </aside>
+        </div>
+        <footer>
+            <p>Autor: 00000000000</p>
+        </footer>
+
+        <script>
+            const ceny = [25, 30, 40, 50];
+            function pokazPromocje(){
+                const wybraneRadio = document.querySelector('input[name="rodzaj"]:checked');
+                if(!wybraneRadio) return;
+                const wybranyIndexPromocji = wybraneRadio.value;
+                document.getElementById("wynik").textContent = `cena promocyjna: ${ceny[wybranyIndexPromocji] - 10}`;
+            }
+        </script>
+
+    </body>
+</html>
