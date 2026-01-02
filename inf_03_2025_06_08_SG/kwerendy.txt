@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT nazwa, dlugosc, szerokosc FROM smok WHERE pochodzenie LIKE 'Polska';
+Zapytanie 2: SELECT DISTINCT pochodzenie FROM smok ORDER BY pochodzenie ASC;
+Zapytanie 3: SELECT p.rok, AVG(s.dlugosc) AS 'Średnia długość' FROM (parada p INNER JOIN udzial u ON p.id=u.id_parada) INNER JOIN smok s ON s.id=u.id_smok WHERE p.rok > 2005 GROUP BY p.rok;
+Zapytanie 4: ALTER TABLE parada ADD lokalizacja VARCHAR(100);

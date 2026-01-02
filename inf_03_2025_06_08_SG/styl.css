@@ -1,0 +1,53 @@
+*{
+    text-align: center;
+    font-family: 'Georgia';
+}
+header, footer{
+    background-color: tomato;
+    color: mistyrose;
+    padding: 10px;
+}
+footer{
+    clear: both;
+}
+nav{
+    width: 20%;
+    float: left;
+}
+nav > section{
+    background-color: #FFAEA5;
+    height: 170px;
+    font-size: 200%;
+}
+nav > section.aktywna{
+    background-color: mistyrose;
+}
+main{
+    background-color: mistyrose;
+    width: 80%;
+    float: left;
+    height: 510px;
+    overflow: auto;
+}
+main > section{
+    display: none;
+}
+main > section.widoczna{
+    display: block;
+}
+
+table{
+    margin: auto;
+    width: 60%;
+    border: 1px dashed indigo;
+}
+select, input[type="submit"]{
+    margin: 20px;
+}
+dt{
+    font-weight: bold;
+    font-style: italic;
+}
+dt:hover{
+    font-size: 180%;
+}
