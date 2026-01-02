@@ -1,0 +1,37 @@
+body{
+    background-color: #F6E5DC;
+    font-family: 'Verdana';
+}
+header{
+    background-color: #2F180C;
+    text-align: center;
+    color: khaki;
+    height: 60px;
+}
+#kontener_paneli{
+    display: grid;
+    grid-template-columns: 60% auto;
+}
+#kontener_paneli article{
+    font-size: 150%;
+    padding: 70px;
+}
+main{
+    background-color: #D0B6A8;
+    text-align: center;
+    padding: 30px;
+}
+footer{
+    background-color: #2F180C;
+    color: khaki;
+    height: 60px;
+}
+img{
+    height: 350px;
+}
+input[type="reset"], input[type="submit"]{
+    margin: 10px;
+    padding: 5px;
+    background-color: #2F180C;
+    color: khaki;
+}
