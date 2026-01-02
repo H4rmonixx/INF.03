@@ -1,0 +1,44 @@
+*{
+    font-family: 'Cambra';
+    text-align: center;
+}
+header, footer{
+    background-color: rgb(120, 0, 46);
+    color: white;
+    padding: 5px;
+    font-size: 150%;
+}
+nav{
+    background-color: rgb(173, 20, 87);
+    text-align: left;
+}
+main{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 322px;
+}
+main > section{
+    background-color: snow;
+    color: olivedrab;
+    text-align: left;
+}
+main > aside{
+    background-color: rgb(173, 20, 87);
+}
+#obraz_samochod{
+    margin: 40px;
+    padding: 10px;
+}
+#obraz_samochod:hover{
+    border: 1px dotted yellowgreen;
+}
+a{
+    padding: 0px 50px;
+    color: yellowgreen;
+}
+table, td{
+    border: 1px solid olivedrab;
+}
+table{
+    width: 90%;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Stacja paliw</title>
+        <link rel="stylesheet" href="styl2.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>Całodobowa stacja paliw</h1>
+        </header>
+        <nav>
+            <a href="stacja.html"><img src="home.png" alt="strona główna"></a>
+            <a href="obliczenia.html"><img src="znak.png" alt="obliczenia"></a>
+            <a href="kwerendy.txt">Pobierz dokumenty</a>
+        </nav>
+        <main>
+            <section>
+                <h2>Orientacyjny koszt paliwa</h2>
+                <label for="typ">Rodzaj paliwa (1-benzyna, 2-olej napędowy):</label><br>
+                <input type="number" id="typ"><br>
+                <label for="litry">Ile litrów?</label><br>
+                <input type="number" id="litry"><br>
+                <button type="button" id="przycisk_oblicz">OBLICZ</button>
+                <div id="wynik"></div>
+            </section>
+            <aside>
+                <img id="obraz_samochod" src="samochod.png" alt="samochód">
+            </aside>
+        </main>
+        <footer>
+            <p>Stronę opracował: 00000000000</p>
+        </footer>
+
+        <script>
+
+            function oblicz(){
+                const typ = parseInt(document.getElementById("typ").value);
+                const litry = parseFloat(document.getElementById("litry").value);
+
+                let koszt = 0;
+
+                switch(typ){
+                    case 1:
+                        koszt = litry * 4;
+                    break;
+                    case 2:
+                        koszt = litry * 3.5;
+                        break;
+                }
+
+                document.getElementById("wynik").textContent = `koszt paliwa: ${koszt} zł`;
+            }
+
+            document.getElementById("przycisk_oblicz").addEventListener("click", oblicz);
+
+        </script>
+
+    </body>
+</html>
