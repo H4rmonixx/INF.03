@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT haslo FROM uzytkownicy WHERE login LIKE 'Justyna';
+Zapytanie 2: SELECT Count(*) FROM dane;
+Zapytanie 3: SELECT login, rok_urodz, przyjaciol, hobby, zdjecie FROM uzytkownicy u INNER JOIN dane d ON u.id = d.id WHERE login LIKE 'Justyna';
+Zapytanie 4: ALTER TABLE dane ADD stanowisko TEXT;
