@@ -1,0 +1,38 @@
+body{
+    font-family: 'Garamond';
+}
+header{
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    height: 50px;
+}
+aside{
+    background-color: tan;
+    height: 500px;
+}
+main{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+main > section > article{
+    background-color: tan;
+    height: 250px;
+    overflow: hidden;
+}
+footer{
+    background-color: saddlebrown;
+    color: white;
+}
+form{
+    background-color: saddlebrown;
+    color: white;
+    padding: 10px 30px;
+    width: 300px;
+}
+form input{
+    margin: 5px;
+}
+p::before{
+    content: "STATUS: ";
+}
