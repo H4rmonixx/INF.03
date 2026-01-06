@@ -1,0 +1,50 @@
+body{
+    background-color: #FFCC99;
+    font-family: 'Garamond';
+    text-align: center;
+}
+header, footer{
+    background-color: darkgreen;
+    color: white;
+    padding: 30px;
+    font-size: 140%;
+}
+nav{
+    background-color: mediumseagreen;
+    word-spacing: 90px;
+    padding: 20px;
+}
+main{
+    display: flex;
+}
+main > section#sekcja_lewa{
+    height: 500px;
+    width: 70%;
+}
+main > section#sekcja_prawa{
+    background-color: mediumseagreen;
+    width: 30%;
+    height: 500px;
+    text-align: left;
+}
+table{
+    border: 1px dashed darkgreen;
+    margin: 30px auto;
+}
+table, th{
+    padding: 5px;
+}
+a{
+    color: white;
+}
+ul{
+    list-style-type: circle;
+}
+tr:hover{
+    background-color: darkgreen;
+    color: white;
+}
+
+.ukryte{
+    display: none;
+}
